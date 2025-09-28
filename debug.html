@@ -1,0 +1,52 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Assets Debug</title>
+<style>
+  body {font: 16px/1.5 system-ui, Arial, sans-serif; padding: 20px;}
+  .ok {color: #0a0;}
+  .bad {color: #a00;}
+  code {background:#f6f6f6; padding:2px 4px; border-radius:4px;}
+  img {max-width:160px; display:block; margin:6px 0 16px;}
+</style>
+<h1>Assets Debug</h1>
+<p><strong>Location:</strong> <code id="loc"></code></p>
+<p><strong>Base URI:</strong> <code id="base"></code></p>
+
+<h2>CSS</h2>
+<link id="css" rel="stylesheet" href="./style.css">
+<p id="cssStatus">Checking <code>./style.css</code>…</p>
+
+<h2>Images</h2>
+<div id="imgs"></div>
+
+<script>
+document.getElementById('loc').textContent = window.location.href;
+document.getElementById('base').textContent = document.baseURI;
+
+function checkCSS(){
+  const link = document.getElementById('css');
+  setTimeout(()=>{
+    // crude check: if sheet rules exist, it loaded
+    const ok = !!(link.sheet && (link.sheet.cssRules || link.sheet.rules || []).length >= 0);
+    document.getElementById('cssStatus').innerHTML = (ok
+      ? '<span class="ok">Loaded</span>: <code>./style.css</code>'
+      : '<span class="bad">NOT loading</span>: <code>./style.css</code> (check filename/path)');
+  }, 500);
+}
+checkCSS();
+
+const files = ["./images/logo.png","./images/chicken.png","./images/turkey.png","./images/eggs.png"];
+const c = document.getElementById('imgs');
+files.forEach(f=>{
+  const p = document.createElement('p');
+  p.innerHTML = 'Testing <code>'+f+'</code>: ';
+  const status = document.createElement('span');
+  status.textContent = '…';
+  p.appendChild(status);
+  c.appendChild(p);
+  const img = document.createElement('img');
+  img.onload = ()=>{ status.innerHTML = '<span class="ok">OK</span>'; p.appendChild(img); };
+  img.onerror = ()=>{ status.innerHTML = '<span class="bad">NOT FOUND</span> (check name/case/path)'; };
+  img.src = f + '?v=' + Date.now(); // bypass cache
+});
+</script>

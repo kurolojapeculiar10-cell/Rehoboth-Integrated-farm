@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rehoboth Integrated Farm</title>
-  <link rel="stylesheet" href="style.css?v=optA3">
+  <link rel="stylesheet" href="style.css?v=optA4">
   <meta name="description" content="Rehoboth Integrated Farm — fresh chickens, organic turkeys, and farm eggs. Quality, care, sustainability.">
 </head>
 <body>
@@ -96,7 +96,32 @@
        <a href="tel:+2348033866534">0803 386 6534</a></p>
   </section>
 
-  <!-- JS for mobile nav + smooth scroll -->
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Rehoboth Integrated Farm" class="footer-logo">
+        <p>Fresh chickens, organic turkeys, and farm eggs.</p>
+      </div>
+
+      <nav class="footer-nav">
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="footer-contact">
+        <p><strong>Call:</strong> <a href="tel:+2348033533095">0803 353 3095</a> /
+           <a href="tel:+2348033866534">0803 386 6534</a></p>
+        <p><strong>Email:</strong> <a href="mailto:kurolojafaith@gmail.com">kurolojafaith@gmail.com</a></p>
+        <p><strong>Location:</strong> [Your town/LGA, State], Nigeria</p>
+      </div>
+    </div>
+
+    <p class="copy">© <span id="year"></span> Rehoboth Integrated Farm. All rights reserved.</p>
+  </footer>
+
+  <!-- JS for mobile nav + smooth scroll + footer year -->
   <script>
     const menuBtn = document.getElementById('menuBtn');
     const mainNav = document.getElementById('mainNav');
@@ -119,6 +144,9 @@
         }
       });
     });
+
+    // Dynamic footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>

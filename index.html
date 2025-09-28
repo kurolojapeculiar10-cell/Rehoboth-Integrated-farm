@@ -1,58 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rehoboth Integrated Farm</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rehoboth Integrated Farm</title>
+  <link rel="stylesheet" href="style.css?v=optA1">
+  <meta name="description" content="Rehoboth Integrated Farm — fresh chickens, organic turkeys, and farm eggs. Quality, care, sustainability.">
 </head>
 <body>
-    <header>
-        <!-- Make sure logo.png is inside an "images" folder in your repo -->
-        <img src="./images/logo.png" alt="Farm Logo" class="logo">
-        <div>
-            <h1>Rehoboth Integrated Farm</h1>
-            <nav>
-                <a href="#about">About Us</a>
-                <a href="#products">Our Products</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </div>
-    </header>
+  <header>
+    <img src="images/logo.png" alt="Farm Logo" class="logo">
+    <div>
+      <h1>Rehoboth Integrated Farm</h1>
+      <nav>
+        <a href="#about">About Us</a>
+        <a href="#products">Our Products</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <section id="about" class="about">
-        <h2>About Us</h2>
-        <p>We are a family-owned poultry farm dedicated to raising healthy chickens and turkeys, and providing fresh farm eggs to our community. Our farm focuses on quality, care, and sustainability.</p>
-    </section>
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>We are a family-owned poultry farm dedicated to raising healthy chickens and turkeys, and providing fresh farm eggs to our community. Our farm focuses on quality, care, and sustainability.</p>
+  </section>
 
-    <section id="products" class="products">
-        <h2>Our Products</h2>
-        <div class="product-grid">
-            <div class="product">
-                <!-- chicken.png must be inside /images -->
-                <img src="./images/chicken.png" alt="Fresh Chickens">
-                <h3>Fresh Chickens</h3>
-                <p>Healthy, farm-raised chickens nurtured with natural feed and care.</p>
-            </div>
-            <div class="product">
-                <!-- turkey.png must be inside /images -->
-                <img src="./images/turkey.png" alt="Organic Turkeys">
-                <h3>Organic Turkeys</h3>
-                <p>Free-range turkeys perfect for holiday meals and special occasions.</p>
-            </div>
-            <div class="product">
-                <!-- eggs.png must be inside /images -->
-                <img src="./images/eggs.png" alt="Farm Eggs">
-                <h3>Farm Eggs</h3>
-                <p>Fresh, organic eggs collected daily from our healthy hens.</p>
-            </div>
-        </div>
-    </section>
+  <section id="products" class="products">
+    <h2>Our Products</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="images/chicken.jpg" alt="Fresh Chickens">
+        <h3>Fresh Chickens</h3>
+        <p>Healthy, farm-raised chickens nurtured with natural feed and care.</p>
+      </div>
+      <div class="product">
+        <img src="images/turkey.jpg" alt="Organic Turkeys">
+        <h3>Organic Turkeys</h3>
+        <p>Free-range turkeys perfect for holiday meals and special occasions.</p>
+      </div>
+      <div class="product">
+        <img src="images/eggs.jpg" alt="Farm Eggs">
+        <h3>Farm Eggs</h3>
+        <p>Fresh, organic eggs collected daily from our healthy hens.</p>
+      </div>
+    </div>
+  </section>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>📞 08033533095 or 08033866534</p>
-        <p>📧 kurolojafaith@gmail.com</p>
-    </section>
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form action="https://formsubmit.co/kurolojafaith@gmail.com" method="POST">
+      <!-- FormSubmit settings -->
+      <input type="hidden" name="_subject" value="New enquiry from Rehoboth Integrated Farm">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://kurolojapeculiar10-cell.github.io/Rehoboth-Integrated-farm/thanks.html">
+      <input type="text" name="_honey" style="display:none"> <!-- spam honeypot -->
+
+      <label for="name">Name</label>
+      <input id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input id="email" type="email" name="email" required>
+
+      <label for="phone">Phone (optional)</label>
+      <input id="phone" name="phone" inputmode="tel" placeholder="+234…">
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+
+    <p>Or call: <a href="tel:+2348033533095">0803 353 3095</a> •
+       <a href="tel:+2348033866534">0803 386 6534</a></p>
+  </section>
 </body>
 </html>

@@ -108,3 +108,38 @@ nav a:hover { text-decoration: underline; }
 }
 #contact input:focus, #contact textarea:focus { border-color:#27ae60; outline:none; }
 #contact textarea { height:120px; resize:none; }
+/* Mobile nav */
+#menuBtn {
+  display: none;
+  font-size: 1.4rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+  }
+  #menuBtn {
+    display: block;
+    margin-left: auto;
+  }
+  #mainNav {
+    display: none;
+    width: 100%;
+    text-align: center;
+  }
+  #mainNav.open {
+    display: block;
+  }
+  #mainNav a {
+    display: block;
+    padding: 10px 0;
+  }
+}
+
+/* Enable smooth scrolling globally (backup to JS) */
+html {
+  scroll-behavior: smooth;
+}

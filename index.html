@@ -3,16 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rehoboth Integrated Farm</title>
-  <link rel="stylesheet" href="style.css?v=optA4">
-  <meta name="description" content="Rehoboth Integrated Farm — fresh chickens, organic turkeys, and farm eggs. Quality, care, sustainability.">
+  <title>Triple P</title>
+  <link rel="stylesheet" href="style.css?v=optA6">
+  <meta name="description" content="Triple P — fresh chickens, organic turkeys, and farm eggs. Quality, care, sustainability.">
+
+  <!-- Open Graph (social preview) -->
+  <meta property="og:title" content="Triple P">
+  <meta property="og:description" content="Fresh chickens, organic turkeys, and farm eggs from a family-owned farm.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kurolojapeculiar10-cell.github.io/Rehoboth-Integrated-farm/">
+  <meta property="og:image" content="https://kurolojapeculiar10-cell.github.io/Rehoboth-Integrated-farm/images/og-cover.png">
+
+  <!-- Twitter (X) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Triple P">
+  <meta name="twitter:description" content="Fresh chickens, organic turkeys, and farm eggs from a family-owned farm.">
+  <meta name="twitter:image" content="https://kurolojapeculiar10-cell.github.io/Rehoboth-Integrated-farm/images/og-cover.png">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/logo.png" type="image/png">
 </head>
 <body>
   <!-- Header -->
   <header>
-    <img src="images/logo.png" alt="Farm Logo" class="logo">
+    <img src="images/logo.png" alt="Triple P Logo" class="logo" width="250" height="250">
     <div class="title-nav">
-      <h1>Rehoboth Integrated Farm</h1>
+      <h1>Triple P</h1>
       <!-- Menu button (mobile) -->
       <button id="menuBtn" aria-expanded="false" aria-controls="mainNav">☰</button>
       <nav id="mainNav">
@@ -37,29 +53,32 @@
     <h2>Our Products</h2>
     <div class="product-grid">
       <div class="product">
-        <img src="images/chicken.png" alt="Fresh Chickens">
+        <img src="images/chicken.png" alt="Fresh Chickens"
+             width="600" height="400" loading="lazy">
         <h3>Fresh Chickens</h3>
         <p>Healthy, farm-raised chickens nurtured with natural feed and care.</p>
         <a class="btn" target="_blank"
-           href="https://wa.me/2348033533095?text=Hello%20Rehoboth!%20I%20want%20to%20order%20Fresh%20Chickens.">
+           href="https://wa.me/2348033533095?text=Hello%20Triple%20P!%20I%20want%20to%20order%20Fresh%20Chickens.">
            Order via WhatsApp
         </a>
       </div>
       <div class="product">
-        <img src="images/turkey.png" alt="Organic Turkeys">
+        <img src="images/turkey.png" alt="Organic Turkeys"
+             width="600" height="400" loading="lazy">
         <h3>Organic Turkeys</h3>
         <p>Free-range turkeys perfect for holiday meals and special occasions.</p>
         <a class="btn" target="_blank"
-           href="https://wa.me/2348033533095?text=Hello%20Rehoboth!%20I%20want%20to%20order%20Organic%20Turkeys.">
+           href="https://wa.me/2348033533095?text=Hello%20Triple%20P!%20I%20want%20to%20order%20Organic%20Turkeys.">
            Order via WhatsApp
         </a>
       </div>
       <div class="product">
-        <img src="images/eggs.png" alt="Farm Eggs">
+        <img src="images/eggs.png" alt="Farm Eggs"
+             width="600" height="400" loading="lazy">
         <h3>Farm Eggs</h3>
         <p>Fresh, organic eggs collected daily from our healthy hens.</p>
         <a class="btn" target="_blank"
-           href="https://wa.me/2348033533095?text=Hello%20Rehoboth!%20I%20want%20to%20order%20Farm%20Eggs.">
+           href="https://wa.me/2348033533095?text=Hello%20Triple%20P!%20I%20want%20to%20order%20Farm%20Eggs.">
            Order via WhatsApp
         </a>
       </div>
@@ -71,11 +90,11 @@
     <h2>Contact Us</h2>
     <form action="https://formsubmit.co/kurolojafaith@gmail.com" method="POST">
       <!-- FormSubmit settings -->
-      <input type="hidden" name="_subject" value="New enquiry from Rehoboth Integrated Farm">
+      <input type="hidden" name="_subject" value="New enquiry from Triple P">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_next" value="https://kurolojapeculiar10-cell.github.io/Rehoboth-Integrated-farm/thanks.html">
-      <input type="text" name="_honey" style="display:none"> <!-- spam honeypot -->
+      <input type="text" name="_honey" style="display:none">
 
       <label for="name">Name</label>
       <input id="name" name="name" required>
@@ -100,7 +119,7 @@
   <footer>
     <div class="footer-inner">
       <div class="footer-brand">
-        <img src="images/logo.png" alt="Rehoboth Integrated Farm" class="footer-logo">
+        <img src="images/logo.png" alt="Triple P Logo" class="footer-logo" width="70" height="70">
         <p>Fresh chickens, organic turkeys, and farm eggs.</p>
       </div>
 
@@ -118,10 +137,10 @@
       </div>
     </div>
 
-    <p class="copy">© <span id="year"></span> Rehoboth Integrated Farm. All rights reserved.</p>
+    <p class="copy">© <span id="year"></span> Triple P. All rights reserved.</p>
   </footer>
 
-  <!-- JS for mobile nav + smooth scroll + footer year -->
+  <!-- JS for nav, smooth scroll, dynamic year -->
   <script>
     const menuBtn = document.getElementById('menuBtn');
     const mainNav = document.getElementById('mainNav');
@@ -132,20 +151,18 @@
       mainNav.classList.toggle('open');
     });
 
-    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', e => {
         const targetId = a.getAttribute('href');
         if (targetId.length > 1) {
           e.preventDefault();
           document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
-          mainNav.classList.remove('open'); // close menu after click
+          mainNav.classList.remove('open');
           menuBtn.setAttribute('aria-expanded', 'false');
         }
       });
     });
 
-    // Dynamic footer year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
